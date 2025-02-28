@@ -1,73 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Карта с метками по адресам</title>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-  <style>
-      #map {
-          width: 600px;
-          height: 400px;
-      }
-  </style>
+    <meta charset="UTF-8">
+    <title>Моя интерактивная карта</title>
+    <!-- Подключаем Яндекс.Мапс API -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <style>
+        #map {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Мои метки</h1>
-  <div id="map"></div>
-  <script>
+<h1>Моя интерактивная карта</h1>
+<div id="map"></div>
+
+<script>
     ymaps.ready(init);
     function init() {
-      // Создаем карту с центром, например, по Москве.
-      var myMap = new ymaps.Map("map", {
-        center: [55.76, 37.64],
-        zoom: 10
-      });
-
-      // Список объектов с адресами, названиями и дополнительной информацией (например, для балуна)
-      var locations = [
-        {
-          name: "Метка 1",
-          address: "рабочий посёлок Скоропусковский, 97, Сергиево-Посадский городской округ, Московская область",
-          balloonContent: '<img src="https://yac-wh-sb-prod-s3-media-07001.storage.yandexcloud.net/media/images/tabby-cat-sharpens-claws-on-so.max-2880x1820.format-jpeg_yuRdEqE.jpg" alt="Фото Метки 1" style="width:200px;">'
-        },
-        {
-          name: "Метка 2",
-          address: "ул. Ленина, 10, Казань",
-          balloonContent: '<img src="https://example.com/image2.jpg" alt="Фото Метки 2" style="width:200px;">'
-        },
-        {
-          name: "Метка 3",
-          address: "ул. Советская, 5, Оренбург",
-          balloonContent: '<img src="https://example.com/image3.jpg" alt="Фото Метки 3" style="width:200px;">'
-        }
-      ];
-
-      // Для каждого объекта вызываем геокодирование и создаем метку
-      locations.forEach(function(location) {
-        ymaps.geocode(location.address).then(function(res) {
-          // Получаем первый найденный результат
-          var firstGeoObject = res.geoObjects.get(0);
-          if (firstGeoObject) {
-            // Получаем координаты найденного объекта
-            var coords = firstGeoObject.geometry.getCoordinates();
-
-            // Создаем метку с названием и содержимым балуна
-            var placemark = new ymaps.Placemark(coords, {
-              balloonContentHeader: location.name,
-              balloonContentBody: location.balloonContent
-            }, {
-              preset: 'islands#icon',
-              iconColor: '#0095b6'
-            });
-            myMap.geoObjects.add(placemark);
-          } else {
-            console.error("Адрес не найден: " + location.address);
-          }
-        }, function (err) {
-          console.error("Ошибка геокодирования: " + err);
+        // Создаём карту в элементе с id="map"
+        var myMap = new ymaps.Map("map", {
+            center: [55.76, 37.64], // координаты центра карты
+            zoom: 10
         });
-      });
+
+        // Создаём метку (Placemark) с балуном (balloon), содержащим картинку
+        var myPlacemark = new ymaps.Placemark(
+            [55.76, 37.64],  // координаты метки
+            {
+                // Текст, который появится в заголовке балуна
+                balloonContentHeader: "Женская консультация",
+                // HTML-код, который появится внутри балуна
+                balloonContentBody: '<img src="https://example.com/picture.jpg" alt="Фото" style="width:200px;">'
+            },
+            {
+                preset: 'islands#redIcon' // или любой другой пресет
+            }
+        );
+
+        // Добавляем метку на карту
+        myMap.geoObjects.add(myPlacemark);
     }
-  </script>
+</script>
 </body>
-</html>-
+</html>
+
+
+
