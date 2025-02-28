@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя карта на GitHub Pages</title>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1ad0e18fbb69d32efb8ad9655943f84c392a408c5d93d90cdf96cfd57e24d240&amp;source=constructor"
+  <meta charset="UTF-8">
+  <title>Карта с метками по адресам</title>
+<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1ad0e18fbb69d32efb8ad9655943f84c392a408c5d93d90cdf96cfd57e24d240&amp;source=constructor"
             width="838"
             height="408"
             frameborder="0">
-    </iframe>
 </head>
 <body>
-    <h1>Моя интерактивная карта</h1>
-    <div id="map"></div>
-    <script>
-        ymaps.ready(init);
-        function init() {
-            var myMap = new ymaps.Map("map", {
-                center: [55.76, 37.64],
-                zoom: 10
-            });
-            // Пример создания метки с картинкой в балуне
-            var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
-                balloonContentHeader: "Женская консультация;рабочий посёлок Скоропусковский, 97",
-                balloonContentBody: '<img src="https://yac-wh-sb-prod-s3-media-07001.storage.yandexcloud.net/media/images/tabby-cat-sharpens-claws-on-so.max-2880x1820.format-jpeg_yuRdEqE.jpg" alt="Изображение" style="width:300px;">'
-            }, {
-                preset: 'islands#icon',
-                iconColor: '#0095b6'
-            });
-            myMap.geoObjects.add(myPlacemark);
+  <h1>Мои метки</h1>
+  <div id="map"></div>
+  <script>
+    ymaps.ready(init);
+    function init() {
+      // Создаем карту с центром, например, по Москве.
+      var myMap = new ymaps.Map("map", {
+        center: [55.76, 37.64],
+        zoom: 10
+      });
+
+      // Список объектов с адресами, названиями и дополнительной информацией (например, для балуна)
+      var locations = [
+        {
+          name: "Метка 1",
+          address: "Женская консультация; рабочий посёлок Скоропусковский, 97",
+          balloonContent: '<img src="https://yac-wh-sb-prod-s3-media-07001.storage.yandexcloud.net/media/images/tabby-cat-sharpens-claws-on-so.max-2880x1820.format-jpeg_yuRdEqE.jpg" alt="Фото Метки 1" style="width:200px;">'
+        },
+        {
+          name: "Метка 2",
+          address: "ул. Ленина, 10, Казань",
+          balloonContent: '<img src="https://example.com/image2.jpg" alt="Фото Метки 2" style="width:200px;">'
+        },
+        {
+          name: "Метка 3",
+          address: "ул. Советская, 5, Оренбург",
+          balloonContent: '<img src="https://example.com/image3.jpg" alt="Фото Метки 3" style="width:200px;">'
         }
-    </script>
+      ];
+
+      // Для каждого объекта вызываем геокодирование и создаем метку
+      locations.forEach(function(location) {
+        ymaps.geocode(location.address).then(function(res) {
+          // Получаем первый найденный результат
+          var firstGeoObject = res.geoObjects.get(0);
+          if (firstGeoObject) {
+            // Получаем координаты найденного объекта
+            var coords = firstGeoObject.geometry.getCoordinates();
+
+            // Создаем метку с названием и содержимым балуна
+            var placemark = new ymaps.Placemark(coords, {
+              balloonContentHeader: location.name,
+              balloonContentBody: location.balloonContent
+            }, {
+              preset: 'islands#icon',
+              iconColor: '#0095b6'
+            });
+            myMap.geoObjects.add(placemark);
+          } else {
+            console.error("Адрес не найден: " + location.address);
+          }
+        }, function (err) {
+          console.error("Ошибка геокодирования: " + err);
+        });
+      });
+    }
+  </script>
 </body>
-</html>
+</html>-
