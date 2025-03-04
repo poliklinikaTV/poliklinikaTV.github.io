@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Моя интерактивная карта</title>
-
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <style>
         #map {
@@ -11,13 +10,6 @@
             height: 400px;
         }
     </style>
-    <!-- Подключаем Яндекс.Мапс API -->
-   <!-- <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a>
-        <a href="https://yandex.ru/maps/?ll=46.221024%2C53.890660&mode=usermaps&source=constructorLink&um=constructor%3A1ad0e18fbb69d32efb8ad9655943f84c392a408c5d93d90cdf96cfd57e24d240&utm_medium=mapframe&utm_source=maps&z=5.64" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск мест</a>
-        <iframe src="https://yandex.ru/map-widget/v1/?ll=46.221024%2C53.890660&mode=usermaps&source=constructorLink&um=constructor%3A1ad0e18fbb69d32efb8ad9655943f84c392a408c5d93d90cdf96cfd57e24d240&z=5.64" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;">       
-        </iframe>
-    </div> -->
-
 </head>
 <body>
 <h1>Моя интерактивная карта</h1>
@@ -26,32 +18,57 @@
 <script>
     ymaps.ready(init);
     function init() {
-        // Создаём карту в элементе с id="map"
+        // Создаём карту с центром в Москве
         var myMap = new ymaps.Map("map", {
-            center: [55.76, 37.64], // координаты центра карты
+            center: [55.76, 37.64],
             zoom: 10
         });
 
-        // Создаём метку (Placemark) с балуном (balloon), содержащим картинку
-        var myPlacemark = new ymaps.Placemark(
+        // Создаем первую метку (например, Детская поликлиника)
+        var placemark1 = new ymaps.Placemark(
             [56.346908842805156, 37.53409638142219],  // координаты метки
             {
-                // Текст, который появится в заголовке балуна
                 balloonContentHeader: "Детская поликлиника",
-                // HTML-код, который появится внутри балуна
-                balloonContentBody: '<img src="https://avatars.mds.yandex.net/get-altay/1001354/2a000001628837d536c56fa874fc3e43d7d1/XXL" alt="Фото" style="width:200px;">'
+                balloonContentBody: '<img src="https://avatars.mds.yandex.net/get-altay/1001354/2a000001628837d536c56fa874fc3e43d7d1/XXL" alt="Фото" style="width:200px;">',
+                iconCaption: "Больничная ул., 7, корп. 11, Дмитров"
             },
             {
-                preset: 'islands#redIcon' // или любой другой пресет
+                preset: 'islands#greenIcon'
             }
         );
 
-        // Добавляем метку на карту
-        myMap.geoObjects.add(myPlacemark);
+        // Создаем вторую метку (например, Аптека)
+        var placemark2 = new ymaps.Placemark(
+            [55.80, 37.50],
+            {
+                balloonContentHeader: "Аптека",
+                balloonContentBody: '<img src="https://example.com/apt.jpg" alt="Фото Аптеки" style="width:200px;">',
+                iconCaption: "ул. Аптечная, 5, Город"
+            },
+            {
+                preset: 'islands#blueIcon'
+            }
+        );
+
+        // Создаем третью метку (например, Офис компании)
+        var placemark3 = new ymaps.Placemark(
+            [55.70, 37.70],
+            {
+                balloonContentHeader: "Офис компании",
+                balloonContentBody: '<img src="https://example.com/office.jpg" alt="Фото Офиса" style="width:200px;">',
+                iconCaption: "ул. Офисная, 20, Город"
+            },
+            {
+                preset: 'islands#greenIcon'
+            }
+        );
+
+        // Добавляем метки на карту
+        myMap.geoObjects.add(placemark1);
+        myMap.geoObjects.add(placemark2);
+        myMap.geoObjects.add(placemark3);
     }
 </script>
 </body>
 </html>
-
-
 
