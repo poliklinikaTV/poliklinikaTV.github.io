@@ -134,8 +134,21 @@
                 iconCaption: "Смешанная поликлиника, ул. Подлипки 4, 160"
             },
             {
-               // preset: 'islands#purpleIcon'
+               // Задаём фиолетовый цвет для смешанных поликлиник
                 iconColor: '#735184'
+            }
+        );
+
+            // Создаем 7 метку 
+        var placemark7 = new ymaps.Placemark(
+            [55.06691716512138, 38.75482099259238],
+            {
+                balloonContentHeader: "Поликлиника №2",
+                balloonContentBody: '<img src="https://amicus-vet.ru/images/statii/a582d6cs-960.jpg" alt="Фото Офиса" style="width:200px;"><br><strong>Адрес:</strong> ул. Астахова, 9',
+                iconCaption: "Поликлиника №2, ул. Астахова, 9"
+            },
+            {
+                preset: 'islands#orangeIcon'
             }
         );
 
@@ -146,6 +159,7 @@
         myMap.geoObjects.add(placemark4);
         myMap.geoObjects.add(placemark5);
         myMap.geoObjects.add(placemark6);
+        myMap.geoObjects.add(placemark7)
     }
 
 
