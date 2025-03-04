@@ -125,12 +125,26 @@
             }
         );
 
+        // Создаем 6 метку 
+        var placemark6 = new ymaps.Placemark(
+            [56.2865503253621, 37.48181771669725],
+            {
+                balloonContentHeader: "Смешанная поликлиника",
+                balloonContentBody: '<img src="https://amicus-vet.ru/images/statii/a582d6cs-960.jpg" alt="Фото Офиса" style="width:200px;"><br><strong>Адрес:</strong> ул. Подлипки 4, 160',
+                iconCaption: "Смешанная поликлиника, ул. Подлипки 4, 160"
+            },
+            {
+                preset: 'islands#purpleIcon'
+            }
+        );
+
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
         myMap.geoObjects.add(placemark3);
         myMap.geoObjects.add(placemark4);
         myMap.geoObjects.add(placemark5);
+        myMap.geoObjects.add(placemark6);
     }
 
 
