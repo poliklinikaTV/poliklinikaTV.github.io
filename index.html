@@ -255,6 +255,30 @@
                 preset: 'islands#orangeIcon'
             }
         );
+                // Создаем 10 метку 
+        var placemark10 = new ymaps.Placemark(
+            [55.06449138258984, 38.75581837067019],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Весенняя, 10 <br><strong>Число экранов на адресе:</strong> 2',
+                iconCaption: "Детская поликлиника, ул. Весенняя, 10"
+            },
+            {
+                preset: 'islands#greenIcon'
+            }
+        );
+                // Создаем 11 метку 
+        var placemark10 = new ymaps.Placemark(
+            [54.85240054172095, 38.54266525463332],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Ленина, 73А <br><strong>Число экранов на адресе:</strong> 4',
+                iconCaption: "Взрослая поликлиника, ул. Ленина, 73А"
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
 
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -265,7 +289,8 @@
         myMap.geoObjects.add(placemark6);
         myMap.geoObjects.add(placemark7);
         myMap.geoObjects.add(placemark8);
-        myMap.geoObjects.add(placemark9)
+        myMap.geoObjects.add(placemark9);
+        myMap.geoObjects.add(placemark10);
     }
 
 
