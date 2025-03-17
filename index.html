@@ -315,14 +315,14 @@
 
                  // Создаем 13 метку 
         var placemark13 = new ymaps.Placemark(
-            [54.85364287691139, 38.539255325831796],
+            54.852404747570276, 38.542739957660075],
             {
                 balloonContentHeader: "Женская консультация",
-                balloonContentBody: '<img src="images/Коломна, ул. Ленина, 73Б.png" alt="Фото2" style="width:200px;"<br><strong>Адрес:</strong> Женская консультация, ул. Ленина, 73 <br><strong>Число экранов на адресе:</strong> 1',
+                balloonContentBody: '<img src="images/Коломна, ул. Ленина, 73.png" alt="Фото2" style="width:200px;"<br><strong>Адрес:</strong> Женская консультация, ул. Ленина, 73 <br><strong>Число экранов на адресе:</strong> 1',
                 iconCaption: "Женская консультация, ул. Ленина, 73"
             },
             {
-                preset: 'islands#greenIcon'
+                preset: 'islands#redIcon'
             }
         );
         // Добавляем метки на карту
@@ -338,6 +338,7 @@
         myMap.geoObjects.add(placemark10);
         myMap.geoObjects.add(placemark11);
         myMap.geoObjects.add(placemark12);
+        myMap.geoObjects.add(placemark13);
     }
 
 
