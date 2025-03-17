@@ -222,7 +222,7 @@
                 preset: 'islands#orangeIcon'
             }
         );
-
+    //Коломна
         // Создаем 6 метку 
         var placemark6 = new ymaps.Placemark(
             [55.093232757343614, 38.72060131214428],
@@ -300,6 +300,19 @@
             }
         );
 
+                 // Создаем 12 метку 
+        var placemark12 = new ymaps.Placemark(
+            [55.076354605758944, 38.79159897252667],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. ул. Ленина, 73Б <br><strong>Число экранов на адресе:</strong> 1',
+                iconCaption: "Детское отделение, ул. Ленина, 73Б"
+            },
+            {
+                preset: 'islands#greenIcon'
+            }
+        );
+
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -312,6 +325,7 @@
         myMap.geoObjects.add(placemark9);
         myMap.geoObjects.add(placemark10);
         myMap.geoObjects.add(placemark11);
+        myMap.geoObjects.add(placemark12);
     }
 
 
