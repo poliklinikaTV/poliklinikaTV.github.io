@@ -29,12 +29,65 @@
             text-align: center;
         }
 
+                /* Легенда */
+        .legend {
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 14px;
+            color: black;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .color-box {
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            display: inline-block;
+            border-radius: 3px;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        /* Контейнер для карты */
+        .map-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
     </style>
 </head>
+    
 <body>
 <h1>Карта ПоликлиникаТВ</h1>
-<div id="map"></div>
-
+<div class="map-container">
+    <div class="legend">
+        <div class="legend-item">
+            <span class="color-box green"></span> Детская поликлиника
+        </div>
+        <div class="legend-item">
+            <span class="color-box orange"></span> Взрослая поликлиника
+        </div>
+    </div>
+    <div id="map"></div>
+</div>
+    
 <script>
     ymaps.ready(init);
     function init() {
