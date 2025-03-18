@@ -640,8 +640,22 @@
                 preset: 'islands#orangeIcon'
             }
         );
-        54.76260052408333, 55.99161211894934
-        Парковая, д. 8
+
+                // 5
+        var placemark18 = new ymaps.Placemark(
+            [54.76260052408333, 55.99161211894934],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Уфа, Парковая, д. 8.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> Парковая, д. 8 <br><strong>Число экранов на адресе:</strong> 3',
+
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+        
+        
+        
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -660,6 +674,7 @@
         myMap.geoObjects.add(placemark15);
         myMap.geoObjects.add(placemark16);
         myMap.geoObjects.add(placemark17);
+        myMap.geoObjects.add(placemark18);
     }
 
 
