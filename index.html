@@ -419,7 +419,8 @@
 
             // Добавляем полигон на карту
             myMap.geoObjects.add(kolomnaPolygon);
-        
+
+        //Дмитров
         // Создаем первую метку (Детская поликлиника)
         var placemark1 = new ymaps.Placemark(
             [56.346908842805156, 37.53409638142219],  // координаты метки
@@ -586,6 +587,22 @@
             }
         );
 
+        //По Башкирии
+        //Уфа
+
+        // 1 
+        var placemark14 = new ymaps.Placemark(
+            [54.80564798294817, 56.127123834490355],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Уфа, Орджоникидзе, д. 15.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> Орджоникидзе, д. 15 <br><strong>Число экранов на адресе:</strong> 2',
+
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+        
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
