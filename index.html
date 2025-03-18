@@ -602,6 +602,20 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
+
+        // 2
+        var placemark15 = new ymaps.Placemark(
+            [54.74262374466141, 55.99468149094161],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Комсомольская, д. 19 <br><strong>Число экранов на адресе:</strong> 3',
+
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+
         
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -618,6 +632,7 @@
         myMap.geoObjects.add(placemark12);
         myMap.geoObjects.add(placemark13);
         myMap.geoObjects.add(placemark14);
+        myMap.geoObjects.add(placemark15);
     }
 
 
