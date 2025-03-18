@@ -618,6 +618,18 @@
 
                 // 3
         var placemark16 = new ymaps.Placemark(
+            [54.75165491562213, 56.00200642038044],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Уфа, проспект Октября, д.441.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> проспект Октября, д.44/1 <br><strong>Число экранов на адресе:</strong> 3',
+
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                // 4
+        var placemark17 = new ymaps.Placemark(
             [54.74927550654971, 55.99783018835465],
             {
                 balloonContentHeader: "Взрослая поликлиника",
@@ -628,7 +640,6 @@
                 preset: 'islands#orangeIcon'
             }
         );
-
         
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -647,6 +658,7 @@
         myMap.geoObjects.add(placemark14);
         myMap.geoObjects.add(placemark15);
         myMap.geoObjects.add(placemark16);
+        myMap.geoObjects.add(placemark17);
     }
 
 
