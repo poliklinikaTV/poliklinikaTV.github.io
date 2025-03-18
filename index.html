@@ -653,8 +653,20 @@
                 preset: 'islands#orangeIcon'
             }
         );
-        
-        
+
+                        // 6
+        var placemark19 = new ymaps.Placemark(
+            [54.76335098914074, 56.003261894695896],
+            {
+                balloonContentHeader: "Женская консультация",
+                balloonContentBody: '<img src="images/Уфа, Рихарда Зорге, д. 1. 54.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> Рихарда Зорге, д.54  <br><strong>Число экранов на адресе:</strong> 4',
+
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+              
         
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -675,6 +687,7 @@
         myMap.geoObjects.add(placemark16);
         myMap.geoObjects.add(placemark17);
         myMap.geoObjects.add(placemark18);
+        myMap.geoObjects.add(placemark19);
     }
 
 
