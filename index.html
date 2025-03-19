@@ -967,6 +967,17 @@
                 preset: 'islands#orangeIcon'
             }
         );
+                     // 32
+        var placemark44 = new ymaps.Placemark(
+            [54.706661847336214, 55.841303706575104],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Уфа, ул. Дагестанская, д. 131а.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Дагестанская, д. 13/1а <br><strong>Число экранов на адресе:</strong> 4',
+            },
+            {
+                iconColor: '#87CEEB' // Другое
+            }
+        );
 
         
         // Добавляем метки на карту
@@ -1013,6 +1024,7 @@
         myMap.geoObjects.add(placemark41);
         myMap.geoObjects.add(placemark42);
         myMap.geoObjects.add(placemark43);
+        myMap.geoObjects.add(placemark44);
     }
 
 
