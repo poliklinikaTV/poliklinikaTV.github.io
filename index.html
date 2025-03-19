@@ -1083,7 +1083,18 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
-
+        //Стрерлитамак
+                        // 1
+        var placemark49 = new ymaps.Placemark(
+            [53.61785166037936, 55.90921708409475],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Стерлитамак, ул. Коммунистическая, д. 91.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Коммунистическая, д. 91 <br><strong>Число экранов на адресе:</strong> 4',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
        
 
         // Добавляем метки на карту
@@ -1135,6 +1146,7 @@
         myMap.geoObjects.add(placemark46);
         myMap.geoObjects.add(placemark47);
         myMap.geoObjects.add(placemark48);
+        myMap.geoObjects.add(placemark49);
     }
 
 
