@@ -306,7 +306,7 @@
             myMap.geoObjects.add(ufaPolygon);
         
             // Определяем координаты полигона, очерчивающего Стрелитамак
-            var ufaCoords = [
+            var stCoords = [
                 [
                     [53.71632699535138, 55.99184814189166],
                     [53.712226462083365, 55.95229639825782],
@@ -337,21 +337,21 @@
             ];
 
             // Создаем полигон с заданными координатами
-            var ufaPolygon = new ymaps.Polygon(
-                ufaCoords,
+            var stPolygon = new ymaps.Polygon(
+                stCoords,
                 {
                     // Подсказка при наведении
-                    hintContent: "<strong> Уфа </strong><br><strong>Всего экранов в городе </strong> 118"
+                    hintContent: "<strong> Стерлитамак </strong><br><strong>Всего экранов в городе </strong> 17"
                 },
                 {
-                     fillColor: '#00640010',  // Тёмно-зелёная заливка (прозрачность 10%)
-                     strokeColor: '#006400',  // Тёмно-зелёная обводка
-                    strokeWidth: 2          // толщина обводки
+                        fillColor: '#FFA50010', // оранжевая заливка с прозрачностью
+                        strokeColor: '#FFA500', // оранжевая обводка
+                        strokeWidth: 2
                 }
             );
 
             // Добавляем полигон на карту
-            myMap.geoObjects.add(ufaPolygon);
+            myMap.geoObjects.add(stPolygon);
         
         //
         //
