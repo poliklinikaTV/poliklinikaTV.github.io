@@ -672,7 +672,7 @@
             [54.746739109186144, 55.999228110713446],
             {
                 balloonContentHeader: "Хирургическое отделение",
-                balloonContentBody: '<br><strong>Адрес:</strong>  Комсомольская, д. 31  <br><strong>Число экранов на адресе:</strong> 2',
+                balloonContentBody: '<br><strong>Адрес:</strong> Комсомольская, д. 31  <br><strong>Число экранов на адресе:</strong> 2',
 
             },
             {
@@ -692,9 +692,55 @@
                 preset: 'islands#orangeIcon'
             }
         );
+                    // 9
+        var placemark22 = new ymaps.Placemark(
+            [54.74423580785492, 55.98239935901016],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> Бабушкина, д. 17 <br><strong>Число экранов на адресе:</strong> 5',
 
-        
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                    // 10
+        var placemark23 = new ymaps.Placemark(
+            [54.747360164022375, 56.02549736254514],
+            {
+                balloonContentHeader: "Кожно венерологический диспансер",
+                balloonContentBody: '<br><strong>Адрес:</strong> 50-летия СССР, д. 45 <br><strong>Число экранов на адресе:</strong> 1',
 
+            },
+            {
+                iconColor: '#87CEEB' // Другое
+            }
+        );
+                    // 11
+        var placemark24 = new ymaps.Placemark(
+            [54.747360164022375, 56.02549736254514],
+            {
+                balloonContentHeader: "Выдача врачебных заключений",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул 50 лет СССР, д 43 <br><strong>Число экранов на адресе:</strong> 1',
+
+            },
+            {
+                iconColor: '#87CEEB' // Другое
+            }
+        );
+
+                    //12
+                var placemark25 = new ymaps.Placemark(
+            [54.75750376132605, 56.008909094551896],
+            {
+                balloonContentHeader: "Хозрасчетная поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> проспект Октября, д. 62/2 <br><strong>Число экранов на адресе:</strong> 3',
+
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
         
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -718,6 +764,10 @@
         myMap.geoObjects.add(placemark19);
         myMap.geoObjects.add(placemark20);
         myMap.geoObjects.add(placemark21);
+        myMap.geoObjects.add(placemark22);
+        myMap.geoObjects.add(placemark23);
+        myMap.geoObjects.add(placemark24);
+        myMap.geoObjects.add(placemark25);
     }
 
 
