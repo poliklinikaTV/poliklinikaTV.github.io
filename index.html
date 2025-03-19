@@ -910,8 +910,65 @@
                 iconColor: '#87CEEB' // Другое
             }
         );
+                    // 27
+        var placemark39 = new ymaps.Placemark(
+            [54.81825173608786, 56.10329881872745],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Александра Невского, д. 31 <br><strong>Число экранов на адресе:</strong> 5',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        ); 
+                    // 28
+        var placemark40 = new ymaps.Placemark(
+            [54.81706404630994, 56.086161386342305],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. 40 лет Октября, д. 1 <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                    // 29
+        var placemark41 = new ymaps.Placemark(
+            [54.71288181747514, 55.82690932346431],
+            {
+                balloonContentHeader: "Женская консультация",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Ухтомского, д. 30 <br><strong>Число экранов на адресе:</strong> 2',
 
-            
+            },
+            {
+                preset: 'islands#redIcon'
+            }
+        );
+                    // 30
+        var placemark42 = new ymaps.Placemark(
+            [54.703824613625166, 55.84360799671185],
+            {
+                balloonContentHeader: "Стоматология",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Правды, д. 1 <br><strong>Число экранов на адресе:</strong> 2',
+
+            },
+            {
+                preset: 'islands#blueIcon'
+            }
+        );
+                     // 31
+        var placemark43 = new ymaps.Placemark(
+            [54.70526725165054, 55.833135963222425],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Мусоргского, д. 21/1 <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+
+        
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -951,6 +1008,11 @@
         myMap.geoObjects.add(placemark36);
         myMap.geoObjects.add(placemark37);
         myMap.geoObjects.add(placemark38);
+        myMap.geoObjects.add(placemark39);
+        myMap.geoObjects.add(placemark40);
+        myMap.geoObjects.add(placemark41);
+        myMap.geoObjects.add(placemark42);
+        myMap.geoObjects.add(placemark43);
     }
 
 
