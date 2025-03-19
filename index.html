@@ -1095,7 +1095,17 @@
                 preset: 'islands#orangeIcon'
             }
         );
-       
+                        // 2
+        var placemark50 = new ymaps.Placemark(
+            [53.61775167577302, 55.90372461139416],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Стерлитамак, Артема 121.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  ул. Артема, д. 121 <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
 
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -1147,6 +1157,7 @@
         myMap.geoObjects.add(placemark47);
         myMap.geoObjects.add(placemark48);
         myMap.geoObjects.add(placemark49);
+        myMap.geoObjects.add(placemark50);
     }
 
 
