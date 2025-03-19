@@ -738,7 +738,7 @@
 
             },
             {
-                preset: 'islands#orangeIcon'
+                iconColor: '#87CEEB' // Другое
             }
         );
                     // 13
@@ -862,7 +862,55 @@
             {
                 iconColor: '#87CEEB' // Другое
             }
-        );        
+        ); 
+                    // 23
+        var placemark35 = new ymaps.Placemark(
+            [54.7085060347881, 55.94709509895556],
+            {
+                balloonContentHeader: "Городская клиническая больница",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Демская, д. 2а <br><strong>Число экранов на адресе:</strong> 1 ',
+            },
+            {
+                iconColor: '#87CEEB' // Другое
+            }
+        );  
+                    // 24
+        var placemark36 = new ymaps.Placemark(
+            [54.76909395830658, 56.06786974617608],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Максима Рыльского, д. 10 <br><strong>Число экранов на адресе:</strong> 6 ',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        ); 
+                    // 25
+        var placemark37 = new ymaps.Placemark(
+            [54.76270809629829, 56.07114406237973],
+            {
+                balloonContentHeader: "Женская консультация",
+                balloonContentBody: '<br><strong>Адрес:</strong> Набережная р. Уфы, д. 25 <br><strong>Число экранов на адресе:</strong> 2',
+
+            },
+            {
+                preset: 'islands#redIcon'
+            }
+        );
+
+                     // 26
+        var placemark38 = new ymaps.Placemark(
+            [54.727351218404, 55.96791005764155],
+            {
+                balloonContentHeader: "Хозрасчетная поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Маршала Жукова, д. 4/1 <br><strong>Число экранов на адресе:</strong> 5',
+
+            },
+            {
+                iconColor: '#87CEEB' // Другое
+            }
+        );
+
             
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -899,6 +947,10 @@
         myMap.geoObjects.add(placemark32);
         myMap.geoObjects.add(placemark33);
         myMap.geoObjects.add(placemark34);
+        myMap.geoObjects.add(placemark35);
+        myMap.geoObjects.add(placemark36);
+        myMap.geoObjects.add(placemark37);
+        myMap.geoObjects.add(placemark38);
     }
 
 
