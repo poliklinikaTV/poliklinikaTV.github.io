@@ -839,9 +839,31 @@
                 preset: 'islands#redIcon'
             }
         );
+                     // 21
+        var placemark33 = new ymaps.Placemark(
+            [54.716846765185586, 55.94883658704057],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Уфа, ул. Цюрупы, д. 4.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Цюрупы, д.4 <br><strong>Число экранов на адресе:</strong> 6',
+
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
         
-        
-        
+                    // 22
+        var placemark34 = new ymaps.Placemark(
+            [54.726672118149516, 55.96275181263962],
+            {
+                balloonContentHeader: "Студенческая поликлиника",
+                balloonContentBody: '<img src="images/Уфа, ул. Чернышевского, д. 125.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Чернышевского, д. 125 <br><strong>Число экранов на адресе:</strong> 1 ',
+            },
+            {
+                iconColor: '#87CEEB' // Другое
+            }
+        );        
+            
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -875,6 +897,8 @@
         myMap.geoObjects.add(placemark30);
         myMap.geoObjects.add(placemark31);
         myMap.geoObjects.add(placemark32);
+        myMap.geoObjects.add(placemark33);
+        myMap.geoObjects.add(placemark34);
     }
 
 
