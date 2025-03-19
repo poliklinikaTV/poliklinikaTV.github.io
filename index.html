@@ -814,6 +814,32 @@
                 preset: 'islands#orangeIcon'
             }
         );
+
+                     // 19
+        var placemark31 = new ymaps.Placemark(
+            [54.72988172663972, 55.9487330645938],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Уфа, ул. Ленина, д. 21.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> Уфа, ул. Ленина, д. 21 <br><strong>Число экранов на адресе:</strong> 1',
+
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                     // 20
+        var placemark32 = new ymaps.Placemark(
+            [54.73068053083595, 55.93818573096199],
+            {
+                balloonContentHeader: "Женская консультация",
+                balloonContentBody: '<img src="images/Уфа, ул. Аксакова, д. 60.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Аксакова, д. 60 <br><strong>Число экранов на адресе:</strong> 2',
+
+            },
+            {
+                preset: 'islands#redIcon'
+            }
+        );
+        
         
         
         // Добавляем метки на карту
@@ -847,6 +873,8 @@
         myMap.geoObjects.add(placemark28);
         myMap.geoObjects.add(placemark29);
         myMap.geoObjects.add(placemark30);
+        myMap.geoObjects.add(placemark31);
+        myMap.geoObjects.add(placemark32);
     }
 
 
