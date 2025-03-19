@@ -742,7 +742,7 @@
             }
         );
                     // 13
-        var placemark21 = new ymaps.Placemark(
+        var placemark26 = new ymaps.Placemark(
             [54.73155498798134, 55.95707228229895],
             {
                 balloonContentHeader: "Взрослая поликлиника",
@@ -753,6 +753,32 @@
                 preset: 'islands#orangeIcon'
             }
         );
+
+                    // 14
+        var placemark26 = new ymaps.Placemark(
+            [54.74347927105002, 55.959263847641616],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> Бульвар Ибрагимова, д. 37/2 <br><strong>Число экранов на адресе:</strong> 3',
+
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                    // 15
+        var placemark27 = new ymaps.Placemark(
+            [54.73348047743622, 55.96336189261471],
+            {
+                balloonContentHeader: "Женская консультация",
+                balloonContentBody: '<img src="images/Уфа, Рихарда Зорге, д. 54.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Пархоменко, д. 95 <br><strong>Число экранов на адресе:</strong> 2',
+
+            },
+            {
+                preset: 'islands#redIcon'
+            }
+        );
+
         
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -780,6 +806,7 @@
         myMap.geoObjects.add(placemark23);
         myMap.geoObjects.add(placemark24);
         myMap.geoObjects.add(placemark25);
+        myMap.geoObjects.add(placemark26);
     }
 
 
