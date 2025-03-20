@@ -28,7 +28,39 @@
             font-weight: bold;
             text-align: center;
         }
+        
+            /* Верхняя легенда */
+            .legend-top {
+                position: absolute;
+                bottom: 230px; /* Разместили выше основной легенды */
+                left: 10px;
+                background: rgba(255, 255, 255, 0.9);
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                font-size: 14px;
+                color: black;
+                z-index: 1000; /* Выше карты */
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+                    /* Линии вместо квадратов */
+            .line {
+                width: 40px;
+                height: 5px;
+                display: inline-block;
+                margin-right: 10px;
+                border-radius: 2px;
+            }
+            
+            /* Цвета линий */
+            .green-line { background-color: green; }
+            .blue-line { background-color: blue; }
+            .red-line { background-color: red; }
+            .orange-line { background-color: orange; }
 
+        
                 /* Легенда */
         .legend {
             position: absolute;
@@ -97,6 +129,25 @@
 <body>
 <h1>Карта ПоликлиникаТВ</h1>
 <div class="map-container">
+
+    
+    <div class="legend-top">
+    <p class="legend-title">Регионы</p>
+    <div class="legend-item">
+        <span class="line green-line"></span> Московская область
+    </div>
+    <div class="legend-item">
+        <span class="line blue-line"></span> Оренбургская область
+    </div>
+    <div class="legend-item">
+        <span class="line red-line"></span> Татарстан
+    </div>
+    <div class="legend-item">
+        <span class="line orange-line"></span> Башкортостан
+    </div>
+</div>
+    
+    
     <div class="legend">
         <p class="legend-title">Метки</p>
         <div class="legend-item">
