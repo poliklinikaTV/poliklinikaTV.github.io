@@ -1345,6 +1345,29 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
+                 //Ишимбай
+                    // 1
+        var placemark58 = new ymaps.Placemark(
+            [53.44198051889439, 56.05197835627151],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Ишимбай, Седова 1.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Седова, д.1 <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+                    // 2
+        var placemark59 = new ymaps.Placemark(
+            [53.452535621731855, 56.03397328356904],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Ишимбай, Стахановская 75.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Стахановская, д.75 <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
         
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -1404,6 +1427,8 @@
         myMap.geoObjects.add(placemark55);
         myMap.geoObjects.add(placemark56);
         myMap.geoObjects.add(placemark57);
+        myMap.geoObjects.add(placemark58);
+        myMap.geoObjects.add(placemark59);
     }
 
 
