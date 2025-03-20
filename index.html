@@ -1107,6 +1107,18 @@
             }
         );
 
+                        // 3
+        var placemark51 = new ymaps.Placemark(
+            [53.60142418332397, 55.95236650096779],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Стерлитамак, Патриотическая 59.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Патриотическая 59 <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -1158,6 +1170,7 @@
         myMap.geoObjects.add(placemark48);
         myMap.geoObjects.add(placemark49);
         myMap.geoObjects.add(placemark50);
+        myMap.geoObjects.add(placemark51);
     }
 
 
