@@ -452,8 +452,8 @@
                     hintContent: "<strong> Салават </strong><br><strong>Всего экранов в городе </strong> 8"
                 },
                 {
-                        fillColor: '#0074B710', // более насыщенный синий-голубой с прозрачностью
-                        strokeColor: '#0074B7', // глубокий голубой
+                        fillColor: '#0074B710', //  синий-голубой с прозрачностью
+                        strokeColor: '#0074B7', // голубой
                         strokeWidth: 2
                 }
             );
@@ -1192,6 +1192,7 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
+        
         //Стрерлитамак
                         // 1
         var placemark49 = new ymaps.Placemark(
@@ -1260,6 +1261,20 @@
                 preset: 'islands#orangeIcon'
             }
         );
+
+            //Салават
+                    // 1
+        var placemark55 = new ymaps.Placemark(
+            [53.61785166037936, 55.90921708409475],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Салават, Чапаева 12.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Чапаева, д. 12 <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+        
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -1315,6 +1330,7 @@
         myMap.geoObjects.add(placemark52);
         myMap.geoObjects.add(placemark53);
         myMap.geoObjects.add(placemark54);
+        myMap.geoObjects.add(placemark55);
     }
 
 
