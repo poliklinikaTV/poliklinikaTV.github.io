@@ -1265,10 +1265,21 @@
             //Салават
                     // 1
         var placemark55 = new ymaps.Placemark(
-            [53.61785166037936, 55.90921708409475],
+            [53.364863365754964, 55.93710324661491],
             {
                 balloonContentHeader: "Взрослая поликлиника",
                 balloonContentBody: '<img src="images/Салават, Чапаева 12.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Чапаева, д. 12 <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                    // 2
+        var placemark56 = new ymaps.Placemark(
+            [53.33961307586682, 55.93998224782127],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Салават, С.Юлаева 18в.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> б-р С. Юлаева, д.18 <br><strong>Число экранов на адресе:</strong> 3',
             },
             {
                 preset: 'islands#orangeIcon'
@@ -1331,6 +1342,7 @@
         myMap.geoObjects.add(placemark53);
         myMap.geoObjects.add(placemark54);
         myMap.geoObjects.add(placemark55);
+        myMap.geoObjects.add(placemark56);
     }
 
 
