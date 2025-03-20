@@ -1285,6 +1285,18 @@
                 preset: 'islands#orangeIcon'
             }
         );
+
+                    // 3
+        var placemark57 = new ymaps.Placemark(
+            [53.33930531847033, 55.94111481757382],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Салават, С.Юлаева 18.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> б-р С. Юлаева, д.18в <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
         
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -1343,6 +1355,7 @@
         myMap.geoObjects.add(placemark54);
         myMap.geoObjects.add(placemark55);
         myMap.geoObjects.add(placemark56);
+        myMap.geoObjects.add(placemark57);
     }
 
 
