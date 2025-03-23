@@ -35,7 +35,7 @@
         
             /* Верхняя легенда */
             .legend-top {
-                position: absolute;
+                position: fixed;
                 bottom: 15vw; /* Разместили выше основной легенды */
                 left: 1vw;
                 background: rgba(255, 255, 255, 0.9);
@@ -50,8 +50,8 @@
                 align-items: flex-start;
                 -webkit-text-size-adjust: none; /* Отключение масштабирования текста в браузерах */
                 text-size-adjust: none;
-                transform: scale(1);
-                transform-origin: top left;
+                max-width: 250px;
+
             }
                     /* Линии вместо квадратов */
             .line {
@@ -60,8 +60,7 @@
                 display: inline-block;
                 margin-right: 10px;
                 border-radius: 2px;
-                transform: scale(1);
-                transform-origin: left;
+                will-change: transform;
                 
             }
             
@@ -74,7 +73,7 @@
         
                 /* Легенда */
         .legend {
-            position: absolute;
+            position: fixed;
             bottom: 1vw;
             left: 1vw;
             background: rgba(255, 255, 255, 0.9);
@@ -86,14 +85,14 @@
             z-index: 1000; /* Легенда выше карты */
             -webkit-text-size-adjust: none; /* Отключение масштабирования текста в браузерах */
             text-size-adjust: none;
-            transform: scale(1);
-            transform-origin: top left;
+            max-width: 250px;
         }
 
         .legend-item {
             display: flex;
             align-items: center;
             margin-bottom: 1vw;
+            white-space: nowrap; /* Запрещает перенос строк */
         }
 
         .legend-title {
@@ -104,6 +103,7 @@
             margin-bottom: 5px;
             -webkit-text-size-adjust: none; /* Отключение масштабирования текста в браузерах */
             text-size-adjust: none;
+            white-space: nowrap; /* Запрещает перенос строк */
         }
 
         .color-box {
@@ -112,8 +112,7 @@
             margin-right: 5px;
             display: inline-block;
             border-radius: 3px;
-            transform: scale(1);
-            transform-origin: center;
+            will-change: transform;
         }
 
         .green {
