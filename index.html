@@ -1596,7 +1596,63 @@
             {
                 preset: 'islands#redIcon'
             }
-        );  
+        );
+                //Октябрьский
+                    // 1
+        var placemark68 = new ymaps.Placemark(
+            [54.48730479502401, 53.47499162338658],
+            {
+                balloonContentHeader: "Стоматология",
+                balloonContentBody: '<img src="images/Октябрьский, ул.Садовое Кольцо, д. 34.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Садовое Кольцо, 34 <br><strong>Число экранов на адресе:</strong> 1',
+            },
+            {
+                preset: 'islands#blueIcon'
+            }
+        );
+                    // 2
+        var placemark69 = new ymaps.Placemark(
+            [54.488370846836716, 53.47444534933663],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Октябрьский, ул.Садовое Кольцо, д.57.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул.Садовое Кольцо, д.57 <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                    // 3
+        var placemark70 = new ymaps.Placemark(
+            [54.482221852919, 53.45787232218378],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Октябрьский, ул.Гоголя, д.10.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул.Гоголя, д.10 <br><strong>Число экранов на адресе:</strong> 5',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                    // 4
+        var placemark71 = new ymaps.Placemark(
+            [54.485686238462016, 53.497487005294424],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Октябрьский, ул. Королева, д.2.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Королева, д.2 <br><strong>Число экранов на адресе:</strong> 6',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        ); 
+                    // 5
+        var placemark72 = new ymaps.Placemark(
+            [56.52875385314444, 57.20224911182696],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Октябрьский, 34-й мкр-н, д.6.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>34-й мкр-н, д.6 <br><strong>Число экранов на адресе:</strong> 5',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -1665,6 +1721,11 @@
         myMap.geoObjects.add(placemark65);
         myMap.geoObjects.add(placemark66);
         myMap.geoObjects.add(placemark67);
+        myMap.geoObjects.add(placemark68);
+        myMap.geoObjects.add(placemark69);
+        myMap.geoObjects.add(placemark70);
+        myMap.geoObjects.add(placemark71);
+        myMap.geoObjects.add(placemark72);
     }
 
 
