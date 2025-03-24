@@ -1473,7 +1473,17 @@
                 preset: 'islands#orangeIcon'
             }
         );
-        
+                     // 3
+        var placemark62 = new ymaps.Placemark(
+            [56.09569591763982, 54.2628541210383],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Нефтекамск, Трактовая,81.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> Трактовая,8/1 <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );       
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -1536,6 +1546,7 @@
         myMap.geoObjects.add(placemark59);
         myMap.geoObjects.add(placemark60);
         myMap.geoObjects.add(placemark61);
+        myMap.geoObjects.add(placemark62);
     }
 
 
