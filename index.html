@@ -51,19 +51,19 @@
 
 
             }
-                    /* Линии вместо квадратов */
+                    /* Линии */
             .line {
                 width: 40px;
                 height: 5px;
                 display: inline-block;
                 margin-right: 10px;
                 border-radius: 2px;
-                max-width: 40px; /* Максимальная ширина */
-                max-height: 5px;  /* Максимальная высота */
-                min-width: 40px;
-                min-height: 5px;
-                zoom: reset;
-                flex-shrink:0;
+    flex-shrink: 0; /* Запрещает уменьшение размера */
+    
+    transform: scale(1); /* Фиксирует масштаб */
+    transform-origin: left center; /* Убеждаемся, что масштабирование не влияет на положение */
+    
+    image-rendering: pixelated; /* Гарантирует, что браузер не будет размывать линию */
                 
             }
             
@@ -95,7 +95,6 @@
             display: flex;
             align-items: center;
             margin-bottom: 1vw;
-            flex-shrink:0;
 
         }
 
