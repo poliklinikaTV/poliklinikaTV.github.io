@@ -1452,13 +1452,25 @@
                 //Нефтекамск
                     // 1
         var placemark60 = new ymaps.Placemark(
-            [56.084468064441374, 54.23431741440104],
+            [56.08510485763164, 54.23497835386679],
             {
                 balloonContentHeader: "Стоматология",
                 balloonContentBody: '<img src="images/Нефтекамск, Кувыкина 4.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> пер. Кувыкина, 4 <br><strong>Число экранов на адресе:</strong> 2',
             },
             {
                 preset: 'islands#blueIcon'
+            }
+        );
+
+                    // 2
+        var placemark61 = new ymaps.Placemark(
+            [56.08444793676449, 54.23430622686196],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Нефтекамск, Кувыкина, 4А.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> пер. Кувыкина, 4A <br><strong>Число экранов на адресе:</strong> 5',
+            },
+            {
+                preset: 'islands#orangeIcon'
             }
         );
         
@@ -1523,6 +1535,7 @@
         myMap.geoObjects.add(placemark58);
         myMap.geoObjects.add(placemark59);
         myMap.geoObjects.add(placemark60);
+        myMap.geoObjects.add(placemark61);
     }
 
 
