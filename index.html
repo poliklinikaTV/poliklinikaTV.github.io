@@ -1448,6 +1448,19 @@
                 preset: 'islands#orangeIcon'
             }
         );
+
+                //Нефтекамск
+                    // 1
+        var placemark60 = new ymaps.Placemark(
+            [56.084468064441374, 54.23431741440104],
+            {
+                balloonContentHeader: "Стоматологическая поликлиника",
+                balloonContentBody: '<img src="images/Нефтекамск, Кувыкина 4.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> пер. Кувыкина, 4 <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                preset: 'islands#blueIcon'
+            }
+        );
         
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -1509,6 +1522,7 @@
         myMap.geoObjects.add(placemark57);
         myMap.geoObjects.add(placemark58);
         myMap.geoObjects.add(placemark59);
+        myMap.geoObjects.add(placemark60);
     }
 
 
