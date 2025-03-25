@@ -36,9 +36,9 @@
         
             /* Верхняя легенда */
             .legend-top {
-                position: absolute;
-                bottom: 15vw; /* Разместили выше основной легенды */
-                left: 1vw;
+               /* position: absolute;*/
+               /* bottom: 15vw;*/ /* Разместили выше основной легенды */
+                /*left: 1vw;*/
                 background: rgba(255, 255, 255, 0.9);
                 padding: 0.7vw;
                 border-radius: 0.3vw;
@@ -77,9 +77,9 @@
         
                 /* Легенда */
         .legend {
-            position: absolute;
-            bottom: 1vw;
-            left: 1vw;
+           /* position: absolute;*/
+           /* bottom: 1vw;*/
+           /* left: 1vw;*/
             background: rgba(255, 255, 255, 0.9);
             padding: 0.7vw;
             border-radius: 0.3vw;
@@ -145,9 +145,11 @@
             position: relative;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
             width: 100vw;
             height: 100vh;
+            padding: 1vw; /* Добавим немного отступа от краёв */
+            gap: 2vw; /* Фиксированное расстояние между легендами */
 
 
         }
