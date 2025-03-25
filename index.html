@@ -34,7 +34,22 @@
             text-align: center;
         }
         
-            /* Верхняя легенда */
+                /* Легенда */
+        .legend {
+           position: absolute;
+           bottom: 1vw;
+            left: 1vw;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.7vw;
+            border-radius: 0.3vw;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 1vw;
+            color: black;
+            z-index: 1000; /* Легенда выше карты */
+            -webkit-text-size-adjust: none; /* Отключение масштабирования текста в браузерах */
+            text-size-adjust: none;
+        }
+                    /* Верхняя легенда */
             .legend-top {
                position: absolute;
                 bottom: calc(1vw + 6vw); /* Отступ на 6vw выше нижней легенды */
@@ -48,9 +63,24 @@
                 color: black;
                 z-index: 1000; /* Выше карты */
                 width: auto;
-
-
             }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1vw;
+
+        }
+
+        .legend-title {
+            font-weight: bold;
+            text-align: center;
+            width: 100%; /* Гарантирует, что заголовок будет на всю ширину */
+            margin-top: 0px;
+            margin-bottom: 0.6vw;
+            -webkit-text-size-adjust: none; /* Отключение масштабирования текста в браузерах */
+            text-size-adjust: none;
+        }
                     /* Линии */
             .line {
                 width: 2.08vw;
@@ -72,41 +102,6 @@
             .blue-line { background-color: blue; }
             .red-line { background-color: red; }
             .orange-line { background-color: orange; }
-
-        
-                /* Легенда */
-        .legend {
-           position: absolute;
-           bottom: 1vw;
-            left: 1vw;
-            background: rgba(255, 255, 255, 0.9);
-            padding: 0.7vw;
-            border-radius: 0.3vw;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            font-size: 1vw;
-            color: black;
-            z-index: 1000; /* Легенда выше карты */
-            -webkit-text-size-adjust: none; /* Отключение масштабирования текста в браузерах */
-            text-size-adjust: none;
-
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1vw;
-
-        }
-
-        .legend-title {
-            font-weight: bold;
-            text-align: center;
-            width: 100%; /* Гарантирует, что заголовок будет на всю ширину */
-            margin-top: 0px;
-            margin-bottom: 0.6vw;
-            -webkit-text-size-adjust: none; /* Отключение масштабирования текста в браузерах */
-            text-size-adjust: none;
-        }
 
         .color-box {
             width: 1vw;
