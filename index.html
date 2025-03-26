@@ -1836,6 +1836,30 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
+                //Новотроицк
+                    // 1
+        var placemark81 = new ymaps.Placemark(
+            [51.196437652544894, 58.31658234995723],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Новотроицк ул. Советская, 62.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Советская, 62 <br><strong>Число экранов на адресе:</strong> 6',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                    // 2
+        var placemark82 = new ymaps.Placemark(
+            [51.21024065095108, 58.29559700682031],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Новотроицк ул. Уметбаева, 19.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Уметбаева, 19 <br><strong>Число экранов на адресе:</strong> 12',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+        
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -1917,6 +1941,8 @@
         myMap.geoObjects.add(placemark78);
         myMap.geoObjects.add(placemark79);
         myMap.geoObjects.add(placemark80);
+        myMap.geoObjects.add(placemark81);
+        myMap.geoObjects.add(placemark82);
     }
 
 
