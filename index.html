@@ -2095,7 +2095,30 @@
                 preset: 'islands#orangeIcon'
             }
         );
-        
+
+                //Оренбург
+                    // 1
+        var placemark92 = new ymaps.Placemark(
+            [51.75903120822656, 55.09661067398801],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Оренбург, ул. Кобозева, 25а.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  ул. Кобозева, 25а <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+                      // 2
+        var placemark93 = new ymaps.Placemark(
+            [51.77600048057733, 55.165655215416066],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Оренбург, ул Алтайская 2.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  ул Алтайская 2 <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );      
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -2188,6 +2211,8 @@
         myMap.geoObjects.add(placemark89);
         myMap.geoObjects.add(placemark90);
         myMap.geoObjects.add(placemark91);
+        myMap.geoObjects.add(placemark92);
+        myMap.geoObjects.add(placemark93);
     }
 
 
