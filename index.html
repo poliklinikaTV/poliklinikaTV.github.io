@@ -2040,14 +2040,59 @@
 
                 //Орск
                     // 1
-        var placemark83 = new ymaps.Placemark(
-            [51.46160383568851, 58.43057391986863],
+        var placemark87 = new ymaps.Placemark(
+            [51.25259957796372, 58.4492601783547],
             {
                 balloonContentHeader: "Детская поликлиника",
-                balloonContentBody: '<img src="images/Гай, проспект Победы, д. 6 Детская поликлиника.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> пр-т Победы, 6/1 <br><strong>Число экранов на адресе:</strong> 4',
+                balloonContentBody: '<img src="images/Орск пр-кт Ленина 103а.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> пр-т Ленина, 103А <br><strong>Число экранов на адресе:</strong> 3',
             },
             {
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+                    // 2
+        var placemark88 = new ymaps.Placemark(
+            [51.225505584155414, 58.48870817073802],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Орск ул. Молодежная 5а.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Молодежная, 5 <br><strong>Число экранов на адресе:</strong> 4',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+                    // 3
+        var placemark89 = new ymaps.Placemark(
+            [51.238864411331036, 58.469300924319924],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Орск, ул. Нефтяников 8.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Нефтяников, 8 <br><strong>Число экранов на адресе:</strong> 9',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+                    // 4
+        var placemark90 = new ymaps.Placemark(
+            [51.238864411331036, 58.469300924319924],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Орск ул. Васнецова.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Васнецова, 14 <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+
+                    // 5
+        var placemark91 = new ymaps.Placemark(
+            [51.245260632700415, 58.47188699846881],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Орск ул. Красная 12.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Красная, 12 <br><strong>Число экранов на адресе:</strong> 5',
+            },
+            {
+                preset: 'islands#orangeIcon'
             }
         );
         
@@ -2138,6 +2183,11 @@
         myMap.geoObjects.add(placemark84);
         myMap.geoObjects.add(placemark85);
         myMap.geoObjects.add(placemark86);
+        myMap.geoObjects.add(placemark87);
+        myMap.geoObjects.add(placemark88);
+        myMap.geoObjects.add(placemark89);
+        myMap.geoObjects.add(placemark90);
+        myMap.geoObjects.add(placemark91);
     }
 
 
