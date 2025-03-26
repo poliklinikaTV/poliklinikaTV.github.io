@@ -2113,12 +2113,25 @@
             [51.77600048057733, 55.165655215416066],
             {
                 balloonContentHeader: "Детская поликлиника",
-                balloonContentBody: '<img src="images/Оренбург, ул Алтайская 2.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  ул Алтайская 2 <br><strong>Число экранов на адресе:</strong> 3',
+                balloonContentBody: '<img src="images/Оренбург, ул Алтайская 2.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  ул Алтайская, 2 <br><strong>Число экранов на адресе:</strong> 3',
             },
             {
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
-        );      
+        );     
+
+                      // 3
+        var placemark94 = new ymaps.Placemark(
+            [51.77276947135716, 55.130550445396985],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Оренбург, ул Туркестанская 43.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  ул Туркестанская, д. 43 <br><strong>Число экранов на адресе:</strong> 16',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        ); 
+
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -2213,6 +2226,7 @@
         myMap.geoObjects.add(placemark91);
         myMap.geoObjects.add(placemark92);
         myMap.geoObjects.add(placemark93);
+        myMap.geoObjects.add(placemark94);
     }
 
 
