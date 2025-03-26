@@ -1990,6 +1990,53 @@
                 preset: 'islands#orangeIcon'
             }
         );
+
+                //Гай
+                    // 1
+        var placemark83 = new ymaps.Placemark(
+            [51.46160383568851, 58.43057391986863],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Гай, проспект Победы, д. 6 Детская поликлиника.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> пр-т Победы, 6/1 <br><strong>Число экранов на адресе:</strong> 4',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+                     // 2
+        var placemark84 = new ymaps.Placemark(
+            [51.459772, 58.430694],
+            {
+                balloonContentHeader: "Женская консультация",
+                balloonContentBody: '<img src="images/Гай, проспект Победы, д. 6 женская консультация.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> пр-т Победы, 6/2 <br><strong>Число экранов на адресе:</strong> 8',
+            },
+            {
+                preset: 'islands#redIcon'
+            }
+        );
+                     // 3
+        var placemark85 = new ymaps.Placemark(
+            [51.45393930835061, 58.44424321329068],
+            {
+                balloonContentHeader: "Стоматология",
+                balloonContentBody: '<img src="images/Гай, проспект Победы 19.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> пр-т Победы, 19 <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                preset: 'islands#blueIcon'
+            }
+        );
+
+                    // 4
+        var placemark86 = new ymaps.Placemark(
+            [51.460246, 58.431823],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Гай Взрослая поликлиника, пр-т Победы, 6.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  пр-т Победы, 6 <br><strong>Число экранов на адресе:</strong> 5',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
         
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
@@ -2074,6 +2121,10 @@
         myMap.geoObjects.add(placemark80);
         myMap.geoObjects.add(placemark81);
         myMap.geoObjects.add(placemark82);
+        myMap.geoObjects.add(placemark83);
+        myMap.geoObjects.add(placemark84);
+        myMap.geoObjects.add(placemark85);
+        myMap.geoObjects.add(placemark86);
     }
 
 
