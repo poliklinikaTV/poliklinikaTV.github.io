@@ -2421,8 +2421,86 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
+                //Чехов
+                    // 1
+        var placemark116 = new ymaps.Placemark(
+            [55.163045, 37.430139],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Чехов, Гагарина 37.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  ул. Гагарина, 37 <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+                          // 2
+        var placemark117 = new ymaps.Placemark(
+            [55.162623, 37.427965],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Чехов, Гагарина 37а.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Гагарина, 37А <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                          // 3
+        var placemark118 = new ymaps.Placemark(
+            [55.170964, 37.467329],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Земская, 17 <br><strong>Число экранов на адресе:</strong> 1',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                     // 4
+        var placemark119 = new ymaps.Placemark(
+            [55.144732, 37.464724],
+            {
+                balloonContentHeader: "Женская консультация",
+                balloonContentBody: '<img src="images/Чехов ул. Московская.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Московская, 85 <br><strong>Число экранов на адресе:</strong> 2',
+            },
+            {
+                preset: 'islands#redIcon'
+            }
+        );
 
+                          // 5
+        var placemark120 = new ymaps.Placemark(
+            [55.148241, 37.479510],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Пионерская, 2 <br><strong>Число экранов на адресе:</strong> 4',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                         // 6
+        var placemark121 = new ymaps.Placemark(
+            [55.149198, 37.478792],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Пионерская, 10 <br><strong>Число экранов на адресе:</strong> 5',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
 
+                         // 7
+        var placemark122 = new ymaps.Placemark(
+            [55.148374, 37.478172],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Чехов, Пионерская 4.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Пионерская, 4 <br><strong>Число экранов на адресе:</strong> 3',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -2539,6 +2617,13 @@
         myMap.geoObjects.add(placemark113);
         myMap.geoObjects.add(placemark114);
         myMap.geoObjects.add(placemark115);
+        myMap.geoObjects.add(placemark116);
+        myMap.geoObjects.add(placemark117);
+        myMap.geoObjects.add(placemark118);
+        myMap.geoObjects.add(placemark119);
+        myMap.geoObjects.add(placemark120);
+        myMap.geoObjects.add(placemark121);
+        myMap.geoObjects.add(placemark122);
     }
 
 
