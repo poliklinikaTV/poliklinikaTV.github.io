@@ -2552,6 +2552,18 @@
                 preset: 'islands#orangeIcon'
             }
         );
+                //Наро-Фоминск
+                    // 1
+        var placemark123 = new ymaps.Placemark(
+            [55.38561559483601, 36.72716730889728],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Наро-Фоминск, Калинина 1.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  ул. Калинина, 1 <br><strong>Число экранов на адресе:</strong> 9',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -2675,6 +2687,7 @@
         myMap.geoObjects.add(placemark120);
         myMap.geoObjects.add(placemark121);
         myMap.geoObjects.add(placemark122);
+        myMap.geoObjects.add(placemark123);
     }
 
 
