@@ -2564,6 +2564,17 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
+                    // 2
+        var placemark124 = new ymaps.Placemark(
+            [55.38991752127952, 36.715645357994504],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Наро-Фоминск, Новикова 32.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Новикова, 32 <br><strong>Число экранов на адресе:</strong> 24',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -2688,10 +2699,10 @@
         myMap.geoObjects.add(placemark121);
         myMap.geoObjects.add(placemark122);
         myMap.geoObjects.add(placemark123);
+        myMap.geoObjects.add(placemark124);
     }
 
 
 </script>
 </body>
 </html>
-
