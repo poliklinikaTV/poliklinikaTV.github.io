@@ -2726,6 +2726,28 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
+                     // 3
+        var placemark129 = new ymaps.Placemark(
+            [55.57503479709546, 38.214494989458366],
+            {
+                balloonContentHeader: "Женская консультация",
+                balloonContentBody: '<img src="images/Раменское, Махова, д. 14к1.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Махова, 14 корп. 1 <br><strong>Число экранов на адресе:</strong> 5',
+            },
+            {
+                preset: 'islands#redIcon'
+            }
+        );
+                    // 4
+        var placemark130 = new ymaps.Placemark(
+            [55.57548961778789, 38.2533796056052],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Раменское, Махова, 19.png" alt="Фото" style="width:200px;"><br><br><strong>Адрес:</strong> ул. Махова, 19 <br><strong>Число экранов на адресе:</strong> 4',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -2855,6 +2877,8 @@
         myMap.geoObjects.add(placemark126);
         myMap.geoObjects.add(placemark127);
         myMap.geoObjects.add(placemark128);
+        myMap.geoObjects.add(placemark129);
+        myMap.geoObjects.add(placemark130);
     }
 
 
