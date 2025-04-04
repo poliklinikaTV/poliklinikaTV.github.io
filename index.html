@@ -2624,6 +2624,30 @@
                 preset: 'islands#orangeIcon'
             }
         );
+
+                //Щелково
+                    // 1
+        var placemark125 = new ymaps.Placemark(
+            [55.930088713769294, 37.979771985324675],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Щелково Фрунзе 1.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong>  ул. Фрунзе, 1 <br><strong>Число экранов на адресе:</strong> 10',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+                    // 2
+        var placemark126 = new ymaps.Placemark(
+            [55.917098495838665, 37.994226488372995],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> Пролетарский проспект, 5 <br><strong>Число экранов на адресе:</strong> 4',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -2749,6 +2773,8 @@
         myMap.geoObjects.add(placemark122);
         myMap.geoObjects.add(placemark123);
         myMap.geoObjects.add(placemark124);
+        myMap.geoObjects.add(placemark125);
+        myMap.geoObjects.add(placemark126);
     }
 
 
