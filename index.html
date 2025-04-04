@@ -2702,6 +2702,29 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
+                //Раменское
+                         // 1
+        var placemark127 = new ymaps.Placemark(
+            [55.57326163993538, 38.21909983184512],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Махова, 14 корп.3 <br><strong>Число экранов на адресе:</strong> 19',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                    // 2
+        var placemark128 = new ymaps.Placemark(
+            [55.57548961778789, 38.2533796056052],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Раменское Крымская, 1.png" alt="Фото" style="width:200px;"><br><br><strong>Адрес:</strong> ул. Крымская, 1 <br><strong>Число экранов на адресе:</strong> 9',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -2829,6 +2852,8 @@
         myMap.geoObjects.add(placemark124);
         myMap.geoObjects.add(placemark125);
         myMap.geoObjects.add(placemark126);
+        myMap.geoObjects.add(placemark127);
+        myMap.geoObjects.add(placemark128);
     }
 
 
