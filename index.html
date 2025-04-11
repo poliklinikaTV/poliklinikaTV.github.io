@@ -2772,6 +2772,40 @@
                 preset: 'islands#orangeIcon'
             }
         );
+                 // 3
+        var placemark133 = new ymaps.Placemark(
+            [55.405066, 37.767052],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<img src="images/Домодедово Курыжова 3А.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. Курыжова, 3А <br><strong>Число экранов на адресе:</strong> 12',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+                    // 4
+        var placemark134 = new ymaps.Placemark(
+            [55.43976545206231, 37.76549469960239],
+            {
+                balloonContentHeader: "Детская поликлиника",
+                balloonContentBody: '<img src="images/Домодедово Каширское ш., 36А.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> Каширское ш., 36А <br><strong>Число экранов на адресе:</strong> 5',
+            },
+            {
+                iconColor: '#008000' // Темно-зелёный (Dark Green)
+            }
+        );
+                     // 5
+        var placemark135 = new ymaps.Placemark(
+            [55.426835, 37.765139],
+            {
+                balloonContentHeader: "Женская консультация",
+                balloonContentBody: '<img src="images/Домодедово 25 лет Октября, 10.png" alt="Фото" style="width:200px;"><br><strong>Адрес:</strong> ул. 25 лет Октября, 10 <br><strong>Число экранов на адресе:</strong> 4',
+            },
+            {
+                preset: 'islands#redIcon'
+            }
+        );
+        
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
@@ -2905,6 +2939,9 @@
         myMap.geoObjects.add(placemark130);
         myMap.geoObjects.add(placemark131);
         myMap.geoObjects.add(placemark132);
+        myMap.geoObjects.add(placemark133);
+        myMap.geoObjects.add(placemark134);
+        myMap.geoObjects.add(placemark135);
     }
 
 
