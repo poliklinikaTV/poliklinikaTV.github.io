@@ -2748,6 +2748,30 @@
                 iconColor: '#008000' // Темно-зелёный (Dark Green)
             }
         );
+                //Домодедово
+                 // 1
+        var placemark131 = new ymaps.Placemark(
+            [55.439441, 37.744334],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Пирогова, 9 <br><strong>Число экранов на адресе:</strong> 11',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
+
+                 // 2
+        var placemark132 = new ymaps.Placemark(
+            [55.439099, 37.746301],
+            {
+                balloonContentHeader: "Взрослая поликлиника",
+                balloonContentBody: '<br><strong>Адрес:</strong> ул. Пирогова, 9 корп. 10 <br><strong>Число экранов на адресе:</strong> 1',
+            },
+            {
+                preset: 'islands#orangeIcon'
+            }
+        );
         // Добавляем метки на карту
         myMap.geoObjects.add(placemark1);
         myMap.geoObjects.add(placemark2);
