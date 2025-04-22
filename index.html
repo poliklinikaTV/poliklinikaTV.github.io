@@ -35,7 +35,7 @@
 </head>
 <body>
     <h1 style="text-align:center; font-family: sans-serif;">Карта ПоликлиникаТВ</h1>
-    <div id="loader">Карта загружается</div>
+    <div id="loader">Карта загружается...</div>
     <div id="map"></div>
 
     <script>
@@ -72,12 +72,14 @@
                         map.geoObjects.add(placemark);
                     });
 
-                    // Когда все данные загрузятся и метки добавлены, скрыть надпись загрузки
-                    document.getElementById('loader').style.display = 'none';
+                    // Скрытие надписи "Карта загружается..." через 5 секунд
+                    setTimeout(() => {
+                        document.getElementById('loader').style.display = 'none';
+                    }, 5000); // через 5 секунд
                 })
                 .catch(err => {
                     console.error('Ошибка загрузки данных:', err);
-                    // В случае ошибки тоже скрываем надпись загрузки
+                    // Если ошибка при загрузке данных, скрыть надпись
                     document.getElementById('loader').style.display = 'none';
                 });
         });
