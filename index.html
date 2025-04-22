@@ -59,8 +59,8 @@
                     'взрослая поликлиника': '#FFA500'
                 };
 
-                // Скрываем загрузчик после появления карты и меток
-                document.getElementById('loader').style.display = 'none';
+                // Добавим все метки и только потом уберём загрузчик
+                let promises = [];
 
                 data.forEach(entry => {
                     const coords = [parseFloat(entry['Широта']), parseFloat(entry['Долгота'])];
@@ -77,6 +77,11 @@
 
                     map.geoObjects.add(placemark);
                 });
+
+                // Когда все метки добавлены — убираем загрузчик
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = 'none';
+                }, 500); // Можно увеличить задержку если нужно
             })
             .catch(err => {
                 document.getElementById('loader').textContent = 'Ошибка загрузки данных';
