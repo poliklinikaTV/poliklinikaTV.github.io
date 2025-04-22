@@ -6,16 +6,41 @@
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        html, body { margin: 0; padding: 0; height: 100%; width: 100%; background-color: #ADE571; color: black; }
-        #map { width: 100vw; height: 100vh; }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #ADE571;
+            color: black;
+        }
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+        #loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #ADE571;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-family: sans-serif;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
 <h1 style="text-align:center; font-family: sans-serif;">Карта ПоликлиникаТВ</h1>
+<div id="loader">Карта загружается...</div>
 <div id="map"></div>
 
 <script>
-    const sheetUrl = 'https://script.google.com/macros/s/AKfycbxWC6sjAlmrwNauysrcC9E0hWHRkcGsSx4rTuUXVJIUh1YgmTcfImn2MQxM_MrrDAga/exec'; 
+    const sheetUrl = 'https://script.google.com/macros/s/AKfycbxWC6sjAlmrwNauysrcC9E0hWHRkcGsSx4rTuUXVJIUh1YgmTcfImn2MQxM_MrrDAga/exec';
 
     ymaps.ready(() => {
         fetch(sheetUrl)
@@ -25,32 +50,38 @@
                     center: [54.5, 48.5],
                     zoom: 6
                 });
-                
+
                 const colorMap = {
-                    'детская поликлиника': '#008000', // зеленый
-                    'женская консультация': '#FF0000', // красный
-                    'стоматология': '#0000FF', // синий
-                    'другое': '#4682B4', // голубое
-                    'взрослая поликлиника': '#FFA500' // оранжевый
+                    'детская поликлиника': '#008000',
+                    'женская консультация': '#FF0000',
+                    'стоматология': '#0000FF',
+                    'другое': '#4682B4',
+                    'взрослая поликлиника': '#FFA500'
                 };
 
+                // Скрываем загрузчик после появления карты и меток
+                document.getElementById('loader').style.display = 'none';
+
                 data.forEach(entry => {
-                    console.log(entry); // Отладочная информация
                     const coords = [parseFloat(entry['Широта']), parseFloat(entry['Долгота'])];
-                    const specialization = entry['Специализация поликлиники']?.toLowerCase() || 'другое'; // Если специализация не указана, используем 'другое'
+                    const specialization = entry['Специализация поликлиники']?.toLowerCase() || 'другое';
 
                     const placemark = new ymaps.Placemark(coords, {
                         balloonContentHeader: entry['Специализация поликлиники'],
-                        balloonContentBody: `<strong>Адрес:</strong> ${entry['Адрес'] || '—'}<br><strong>Количество экранов:</strong> ${entry['Число экранов на адресе'] || '—'}<br>`
-                            + (entry['Фото носителя'] ? `<img src="${entry['Фото носителя']}" alt="Фото" style="width:200px;">` : '')
+                        balloonContentBody: <strong>Адрес:</strong> ${entry['Адрес'] || '—'}<br><strong>Количество экранов:</strong> ${entry['Число экранов на адресе'] || '—'}<br> +
+                            (entry['Фото носителя'] ? <img src="${entry['Фото носителя']}" alt="Фото" style="width:200px;"> : '')
                     },
                     {
-                        iconColor: colorMap[specialization] || '#999' // Если специализация не найдена, используем серый цвет
+                        iconColor: colorMap[specialization] || '#999'
                     });
+
                     map.geoObjects.add(placemark);
                 });
             })
-            .catch(err => console.error('Ошибка загрузки данных:', err));
+            .catch(err => {
+                document.getElementById('loader').textContent = 'Ошибка загрузки данных';
+                console.error('Ошибка загрузки данных:', err);
+            });
     });
 </script>
 </body>
