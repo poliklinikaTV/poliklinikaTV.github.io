@@ -43,13 +43,17 @@
     const sheetUrl = 'https://script.google.com/macros/s/AKfycbxWC6sjAlmrwNauysrcC9E0hWHRkcGsSx4rTuUXVJIUh1YgmTcfImn2MQxM_MrrDAga/exec';
 
     ymaps.ready(() => {
+        const map = new ymaps.Map("map", {
+            center: [54.5, 48.5],
+            zoom: 6
+        });
+
         fetch(sheetUrl)
             .then(response => response.json())
             .then(data => {
-                const map = new ymaps.Map("map", {
-                    center: [54.5, 48.5],
-                    zoom: 6
-                });
+                if (!data || !Array.isArray(data)) {
+                    throw new Error("Некорректный формат данных");
+                }
 
                 const colorMap = {
                     'детская поликлиника': '#008000',
@@ -59,33 +63,30 @@
                     'взрослая поликлиника': '#FFA500'
                 };
 
-                // Добавим все метки и только потом уберём загрузчик
-                let promises = [];
-
                 data.forEach(entry => {
-                    const coords = [parseFloat(entry['Широта']), parseFloat(entry['Долгота'])];
+                    const lat = parseFloat(entry['Широта']);
+                    const lon = parseFloat(entry['Долгота']);
+                    if (isNaN(lat) || isNaN(lon)) return;
+
                     const specialization = entry['Специализация поликлиники']?.toLowerCase() || 'другое';
 
-                    const placemark = new ymaps.Placemark(coords, {
+                    const placemark = new ymaps.Placemark([lat, lon], {
                         balloonContentHeader: entry['Специализация поликлиники'],
                         balloonContentBody: <strong>Адрес:</strong> ${entry['Адрес'] || '—'}<br><strong>Количество экранов:</strong> ${entry['Число экранов на адресе'] || '—'}<br> +
                             (entry['Фото носителя'] ? <img src="${entry['Фото носителя']}" alt="Фото" style="width:200px;"> : '')
-                    },
-                    {
+                    }, {
                         iconColor: colorMap[specialization] || '#999'
                     });
 
                     map.geoObjects.add(placemark);
                 });
 
-                // Когда все метки добавлены — убираем загрузчик
-                setTimeout(() => {
-                    document.getElementById('loader').style.display = 'none';
-                }, 500); // Можно увеличить задержку если нужно
+                // Убираем лоадер после отрисовки всех меток
+                document.getElementById('loader').style.display = 'none';
             })
             .catch(err => {
-                document.getElementById('loader').textContent = 'Ошибка загрузки данных';
                 console.error('Ошибка загрузки данных:', err);
+                document.getElementById('loader').textContent = 'Ошибка загрузки карты. Попробуйте позже.';
             });
     });
 </script>
