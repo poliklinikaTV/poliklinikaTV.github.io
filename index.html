@@ -38,24 +38,40 @@
 <div id="map"></div>
 
 <script>
-    // Ждём готовности библиотеки
+    let mapLoaded = false;
+
+    // Ждем загрузки Яндекс.Карт
     ymaps.ready(() => {
-        // Создаем карту
         const map = new ymaps.Map("map", {
             center: [54.5, 48.5],
             zoom: 6
         });
 
-        // Когда карта полностью загрузится (включая тайлы и всё прочее)
-        map.events.once('boundschange', () => {
-            document.getElementById('loader').style.display = 'none';
+        // Проверка, когда карта полностью загружена
+        map.events.once('load', () => {
+            mapLoaded = true;
+            checkMapStatus();
         });
 
-        // Добавим для демонстрации метку
+        // Функция для скрытия текста "Карта загружается..." после загрузки карты
+        function checkMapStatus() {
+            if (mapLoaded) {
+                document.getElementById('loader').style.display = 'none';
+            }
+        }
+
+        // Добавление метки
         const placemark = new ymaps.Placemark([54.5, 48.5], {
             balloonContent: 'Пример точки'
         });
         map.geoObjects.add(placemark);
+        
+        // Ждем 5 секунд и скрываем текст вручную (если карта не загрузилась)
+        setTimeout(() => {
+            if (!mapLoaded) {
+                document.getElementById('loader').style.display = 'none';
+            }
+        }, 5000); // После 5 секунд скрываем надпись
     });
 </script>
 </body>
