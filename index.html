@@ -41,17 +41,10 @@
     <script>
         const sheetUrl = 'https://script.google.com/macros/s/AKfycbxWC6sjAlmrwNauysrcC9E0hWHRkcGsSx4rTuUXVJIUh1YgmTcfImn2MQxM_MrrDAga/exec';
 
-        let mapLoaded = false;
-
         ymaps.ready(() => {
             const map = new ymaps.Map("map", {
                 center: [54.5, 48.5],
                 zoom: 6
-            });
-
-            map.events.once('load', () => {
-                mapLoaded = true;
-                checkMapStatus();
             });
 
             fetch(sheetUrl)
@@ -78,22 +71,15 @@
                         });
                         map.geoObjects.add(placemark);
                     });
+
+                    // Когда все данные загрузятся и метки добавлены, скрыть надпись загрузки
+                    document.getElementById('loader').style.display = 'none';
                 })
-                .catch(err => console.error('Ошибка загрузки данных:', err));
-
-            // Функция для скрытия текста "Карта загружается..." после загрузки карты
-            function checkMapStatus() {
-                if (mapLoaded) {
+                .catch(err => {
+                    console.error('Ошибка загрузки данных:', err);
+                    // В случае ошибки тоже скрываем надпись загрузки
                     document.getElementById('loader').style.display = 'none';
-                }
-            }
-
-            // Ждем 5 секунд и скрываем текст вручную (если карта не загрузилась)
-            setTimeout(() => {
-                if (!mapLoaded) {
-                    document.getElementById('loader').style.display = 'none';
-                }
-            }, 5000); // После 5 секунд скрываем надпись
+                });
         });
     </script>
 </body>
