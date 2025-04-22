@@ -12,7 +12,6 @@
             height: 100%;
             width: 100%;
             background-color: #ADE571;
-            color: black;
         }
         #map {
             width: 100vw;
@@ -22,72 +21,41 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
+            width: 100vw;
             height: 100vh;
-            background: #ADE571;
+            background-color: #ADE571;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             font-size: 24px;
             font-family: sans-serif;
-            z-index: 10;
+            z-index: 100;
         }
     </style>
 </head>
 <body>
-<h1 style="text-align:center; font-family: sans-serif;">Карта ПоликлиникаТВ</h1>
 <div id="loader">Карта загружается...</div>
 <div id="map"></div>
 
 <script>
-    const sheetUrl = 'https://script.google.com/macros/s/AKfycbxWC6sjAlmrwNauysrcC9E0hWHRkcGsSx4rTuUXVJIUh1YgmTcfImn2MQxM_MrrDAga/exec';
-
+    // Ждём готовности библиотеки
     ymaps.ready(() => {
+        // Создаем карту
         const map = new ymaps.Map("map", {
             center: [54.5, 48.5],
             zoom: 6
         });
 
-        fetch(sheetUrl)
-            .then(response => response.json())
-            .then(data => {
-                if (!data || !Array.isArray(data)) {
-                    throw new Error("Некорректный формат данных");
-                }
+        // Когда карта полностью загрузится (включая тайлы и всё прочее)
+        map.events.once('boundschange', () => {
+            document.getElementById('loader').style.display = 'none';
+        });
 
-                const colorMap = {
-                    'детская поликлиника': '#008000',
-                    'женская консультация': '#FF0000',
-                    'стоматология': '#0000FF',
-                    'другое': '#4682B4',
-                    'взрослая поликлиника': '#FFA500'
-                };
-
-                data.forEach(entry => {
-                    const lat = parseFloat(entry['Широта']);
-                    const lon = parseFloat(entry['Долгота']);
-                    if (isNaN(lat) || isNaN(lon)) return;
-
-                    const specialization = entry['Специализация поликлиники']?.toLowerCase() || 'другое';
-
-                    const placemark = new ymaps.Placemark([lat, lon], {
-                        balloonContentHeader: entry['Специализация поликлиники'],
-                        balloonContentBody: <strong>Адрес:</strong> ${entry['Адрес'] || '—'}<br><strong>Количество экранов:</strong> ${entry['Число экранов на адресе'] || '—'}<br> +
-                            (entry['Фото носителя'] ? <img src="${entry['Фото носителя']}" alt="Фото" style="width:200px;"> : '')
-                    }, {
-                        iconColor: colorMap[specialization] || '#999'
-                    });
-
-                    map.geoObjects.add(placemark);
-                });
-
-                // Убираем лоадер после отрисовки всех меток
-                document.getElementById('loader').style.display = 'none';
-            })
-            .catch(err => {
-                console.error('Ошибка загрузки данных:', err);
-                document.getElementById('loader').textContent = 'Ошибка загрузки карты. Попробуйте позже.';
-            });
+        // Добавим для демонстрации метку
+        const placemark = new ymaps.Placemark([54.5, 48.5], {
+            balloonContent: 'Пример точки'
+        });
+        map.geoObjects.add(placemark);
     });
 </script>
 </body>
