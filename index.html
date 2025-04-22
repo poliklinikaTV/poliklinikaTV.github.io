@@ -72,10 +72,11 @@
                         map.geoObjects.add(placemark);
                     });
 
-                    // Скрытие надписи "Карта загружается..." через 5 секунд
-                    setTimeout(() => {
+                    // Скрытие надписи "Карта загружается..." как только карта и все объекты загружены
+                    map.events.add('boundschange', function () {
+                        // Это событие срабатывает после того, как карта и все объекты будут загружены
                         document.getElementById('loader').style.display = 'none';
-                    }, 5000); // через 5 секунд
+                    });
                 })
                 .catch(err => {
                     console.error('Ошибка загрузки данных:', err);
