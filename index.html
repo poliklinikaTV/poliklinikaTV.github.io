@@ -43,8 +43,7 @@
                     const placemark = new ymaps.Placemark(coords, {
                         balloonContentHeader: entry['Специализация поликлиники'],
                         balloonContentBody: `<strong>Адрес:</strong> ${entry['Адрес'] || '—'}<br><strong>Количество экранов:</strong> ${entry['Число экранов на адресе'] || '—'}<br>`
-                            +(entry['Фото носителя'] ? '<img src="https://drive.google.com/uc?export=view&id=${entry['Фото носителя']}" alt="Фото" style="width:200px;">' : '')
-                            /*+ (entry['Фото носителя'] ? `<img src="${entry['Фото носителя']}" alt="Фото" style="width:200px;">` : '')*/
+                            + (entry['Фото носителя'] ? `<img src="${entry['Фото носителя']}" alt="Фото" style="width:200px;">` : '')
                     },
                     {
                         iconColor: colorMap[specialization] || '#999' // Если специализация не найдена, используем серый цвет
