@@ -35,7 +35,7 @@
                 };
 
                 data.forEach(entry => {
-                    console.log(entry); // Отладочная информация
+                    console.log(entry);
                     const coords = [parseFloat(entry['Широта']), parseFloat(entry['Долгота'])];
                     const specialization = entry['Специализация поликлиники']?.toLowerCase() || 'другое'; // Если специализация не указана, используем 'другое'
 
@@ -45,7 +45,7 @@
                             + (entry['Фото носителя'] ? `<img src="${entry['Фото носителя']}" alt="Фото" style="width:200px;">` : '')
                     },
                     {
-                        iconColor: colorMap[specialization] || '#999' // Если специализация не найдена, используем серый цвет
+                        iconColor: colorMap[specialization] || '#999' // Если специализация не найдена серый цвет
                     });
                     map.geoObjects.add(placemark);
                 });
